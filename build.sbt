@@ -7,7 +7,7 @@ name := "play-angular-require-seed"
 organization in ThisBuild := "your.organization"
 
 // TODO Set your version here
-version := "2.4.6-SNAPSHOT"
+version := "2.5.0-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.11.7"
 
@@ -39,8 +39,6 @@ scalacOptions in ThisBuild ++= Seq(
   "-Ywarn-inaccessible",
   "-Ywarn-dead-code"
 )
-
-routesGenerator := InjectedRoutesGenerator
 
 //
 // sbt-web configuration

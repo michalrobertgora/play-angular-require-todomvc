@@ -8,7 +8,7 @@ import router.Routes
 
 class AppLoader extends ApplicationLoader {
   override def load(context: Context): Application = {
-    Logger.configure(context.environment)
+    //Logger.configure(context.environment)
     new AppComponents(context).application
   }
 }
@@ -24,7 +24,7 @@ class AppComponents(context: Context) extends BuiltInComponentsFromContext(conte
 
   val gzipFilter = new GzipFilter(shouldGzip =
     (request, response) => {
-      val contentType = response.headers.get("Content-Type")
+      val contentType = response.header.headers.get("Content-Type")
       contentType.exists(_.startsWith("text/html")) || request.path.endsWith("jsroutes.js")
     })
 
