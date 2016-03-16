@@ -1,5 +1,3 @@
-import WebKeys._
-
 // TODO Replace with your project's/module's name
 name := "play-angular-require-seed"
 
