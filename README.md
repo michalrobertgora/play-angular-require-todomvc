@@ -16,10 +16,12 @@ The updates made for Play 2.2 and newer WebJars are explained here:
 http://www.mariussoutier.com/blog/2014/03/25/requirejs-optimization-play-2-2-webjars-cdns/
 
 The changes for Play 2.3 and sbt-web are discussed in this series about sbt-web:
-http://mariussoutier.com/blog/2014/10/20/intro-sbt-web/ 
+http://mariussoutier.com/blog/2014/10/20/intro-sbt-web/
 
 The changes for Play 2.4 are summarized in this short summary post:
 http://mariussoutier.com/blog/2015/07/25/play-angular-require-seed-updates/
+
+Updated for Play 2.5 with only a few minor changes.
 
 ## Code Organization
 
@@ -84,7 +86,7 @@ Choose from these featured templates or enter a template name:
   2) minimal-scala
   3) play-java
   4) play-scala
-> 
+>
 ~~~
 
 Enter `play-angular-require-seed` (you can use tab completion).
