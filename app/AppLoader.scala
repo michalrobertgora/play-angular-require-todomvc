@@ -2,13 +2,13 @@ import play.api.ApplicationLoader.Context
 import play.api.cache.EhCacheComponents
 import play.api.mvc.EssentialFilter
 import play.api.routing.Router
-import play.api.{Logger, Application, ApplicationLoader, BuiltInComponentsFromContext}
+import play.api._
 import play.filters.gzip.GzipFilter
 import router.Routes
 
 class AppLoader extends ApplicationLoader {
   override def load(context: Context): Application = {
-    //Logger.configure(context.environment)
+    LoggerConfigurator(context.environment.classLoader).foreach(_.configure(context.environment))
     new AppComponents(context).application
   }
 }
