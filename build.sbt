@@ -5,7 +5,7 @@ name := "play-angular-require-seed"
 organization in ThisBuild := "your.organization"
 
 // TODO Set your version here
-version := "2.5.1-SNAPSHOT"
+version := "2.5.2-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.11.7"
 
