@@ -25,7 +25,7 @@ trait Security { self: Controller =>
   def HasToken[A](p: BodyParser[A] = parse.anyContent)(
     f: String => Long => Request[A] => Result): Action[A] =
     Action(p) { implicit request =>
-      request.cookies.get("XSRF-TOKEN").fold {
+      request.cookies.get(AuthTokenCookieKey).fold {
         Unauthorized(Json.obj("message" -> "Invalid XSRF Token cookie"))
       } { xsrfTokenCookie =>
         val maybeToken = request.headers.get(AuthTokenHeader).orElse(request.getQueryString(AuthTokenUrlKey))
