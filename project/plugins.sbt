@@ -8,8 +8,8 @@ resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/releas
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.6")
 
 // Build + Deployments
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.6")
-addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.1")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.1.1")
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
 
 // sbt-web
 addSbtPlugin("com.typesafe.sbt" % "sbt-jshint" % "1.0.3")
