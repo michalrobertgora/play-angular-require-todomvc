@@ -20,7 +20,12 @@ class AppComponents(context: Context) extends BuiltInComponentsFromContext(conte
   lazy val assets = new controllers.Assets(httpErrorHandler)
 
   // Routes is a generated class
-  override def router: Router = new Routes(httpErrorHandler, applicationController, usersController, assets)
+  override def router: Router = new Routes(
+    httpErrorHandler,
+    applicationController,
+    usersController,
+    assets
+  ).withPrefix(httpConfiguration.context) // set prefix via play.http.context in application.conf
 
   val gzipFilter = new GzipFilter(shouldGzip =
     (request, response) => {
