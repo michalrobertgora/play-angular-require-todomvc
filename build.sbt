@@ -1,26 +1,27 @@
 // TODO Replace with your project's/module's name
 name := "play-angular-require-seed"
 
-// TODO Set your organization here; ThisBuild means it will apply to all sub-modules
+// TODO Set your organization here; ThisBuild means it will apply build itself and to all sub-modules
 organization in ThisBuild := "your.organization"
 
 // TODO Set your version here
-version := "2.5.6-SNAPSHOT"
+version := "2.5.9-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.11.8"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file("."))
+  .enablePlugins(PlayScala)
 
 // Dependencies
 libraryDependencies ++= Seq(
   filters,
   cache,
   // WebJars (i.e. client-side) dependencies
-  "org.webjars" % "requirejs" % "2.1.14-1",
-  "org.webjars" % "underscorejs" % "1.6.0-3",
-  "org.webjars" % "jquery" % "1.11.1",
-  "org.webjars" % "bootstrap" % "3.3.6" exclude("org.webjars", "jquery"),
-  "org.webjars" % "angularjs" % "1.4.9" exclude("org.webjars", "jquery")
+  "org.webjars" % "requirejs" % "2.3.2",
+  "org.webjars" % "underscorejs" % "1.8.3",
+  "org.webjars" % "jquery" % "1.12.4",
+  "org.webjars" % "bootstrap" % "3.3.7-1" exclude("org.webjars", "jquery"),
+  "org.webjars" % "angularjs" % "1.4.10" exclude("org.webjars", "jquery")
 )
 
 // Scala Compiler Options
