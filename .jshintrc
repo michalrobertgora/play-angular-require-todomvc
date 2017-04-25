@@ -10,5 +10,6 @@
     "requirejs": true,
     "require": true,
     "define": true
-  }
+  },
+  "node": true
 }

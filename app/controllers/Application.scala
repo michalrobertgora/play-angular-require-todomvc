@@ -58,6 +58,8 @@ class Application(val cache: CacheApi) extends Controller with Security with Log
     }
   }
 
+  // TODO Login and logout methods from original seed - commented out for simplicity
+  /*
   /** Used for obtaining the email and password from the HTTP login request */
   case class LoginCredentials(email: String, password: String)
 
@@ -116,5 +118,5 @@ class Application(val cache: CacheApi) extends Controller with Security with Log
     log.info(s"User $userId succesfully logged out")
     Ok.discardingCookies(DiscardingCookie(name = AuthTokenCookieKey))
   }
-
+*/
 }

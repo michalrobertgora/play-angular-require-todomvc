@@ -1,3 +1,4 @@
+/*
 package controllers
 
 import play.api.cache.CacheApi
@@ -43,3 +44,4 @@ class Users(val cache: CacheApi) extends Controller with Security {
   }
 
 }
+*/

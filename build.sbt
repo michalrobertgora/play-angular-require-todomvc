@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
   filters,
   cache,
   // WebJars (i.e. client-side) dependencies
-  "org.webjars" % "requirejs" % "2.3.2",
+  "org.webjars" % "requirejs" % "2.3.3",
   "org.webjars" % "underscorejs" % "1.8.3",
   "org.webjars" % "jquery" % "1.12.4",
   "org.webjars" % "bootstrap" % "3.3.7-1" exclude("org.webjars", "jquery"),

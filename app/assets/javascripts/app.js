@@ -1,14 +1,18 @@
-/**
- * The app module, as both AngularJS as well as RequireJS module.
- * Splitting an app in several Angular modules serves no real purpose in Angular 1.2.
- * (Hopefully this will change in the near future.)
- * Splitting it into several RequireJS modules allows async loading. We cannot take full advantage
- * of RequireJS and lazy-load stuff because the angular modules have their own dependency system.
- */
-define(['angular', 'home', 'user', 'dashboard'], function(angular) {
-  'use strict';
+/*global require*/
+'use strict';
 
-  // We must already declare most dependencies here (except for common), or the submodules' routes
-  // will not be resolved
-  return angular.module('app', ['yourprefix.home', 'yourprefix.user', 'yourprefix.dashboard']);
+require([
+	'angular'
+], function (angular) {
+	require([
+		'todomvc/todo',
+		'todomvc/todoFocus',
+		'todomvc/todoEscape',
+		'todomvc/todoStorage'
+	], function (todoCtrl, todoFocusDir, todoEscapeDir, todoStorageSrv) {
+		angular
+			.module('todomvc', [todoFocusDir, todoEscapeDir, todoStorageSrv])
+			.controller('TodoController', todoCtrl);
+		angular.bootstrap(document, ['todomvc']);			
+	});	
 });
