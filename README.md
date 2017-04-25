@@ -1,3 +1,7 @@
+Based on https://github.com/mariussoutier/play-angular-require-seed
+
+Original readme below:
+
 # Example application for Play+AngularJS+RequireJS.
 
 ## Intro
