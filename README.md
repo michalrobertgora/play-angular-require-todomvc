@@ -1,4 +1,6 @@
 Based on https://github.com/mariussoutier/play-angular-require-seed
+http://mariussoutier.com/blog/2013/08/25/requirejs-optimization-play-webjars/
+NOTE: blog posts are based on pretty old versions of ng, Play and this seed
 
 Original readme below:
 

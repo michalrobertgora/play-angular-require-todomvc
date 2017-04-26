@@ -1,11 +1,11 @@
 // TODO Replace with your project's/module's name
-name := "play-angular-require-seed"
+name := "todomvc-play-angular-require"
 
 // TODO Set your organization here; ThisBuild means it will apply build itself and to all sub-modules
-organization in ThisBuild := "your.organization"
+organization in ThisBuild := "eiipii"
 
 // TODO Set your version here
-version := "2.5.9-SNAPSHOT"
+version := "0.1.0-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.11.8"
 
@@ -21,7 +21,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "underscorejs" % "1.8.3",
   "org.webjars" % "jquery" % "1.12.4",
   "org.webjars" % "bootstrap" % "3.3.7-1" exclude("org.webjars", "jquery"),
-  "org.webjars" % "angularjs" % "1.4.10" exclude("org.webjars", "jquery")
+  "org.webjars" % "angularjs" % "1.4.10" exclude("org.webjars", "jquery"),
+  "org.webjars" %% "webjars-play" % "2.5.0"
 )
 
 // Scala Compiler Options
