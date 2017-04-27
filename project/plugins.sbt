@@ -10,6 +10,8 @@ addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.9")
 // Build + Deployments
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.1.1")
 addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
+// addSbtPlugin("se.marcuslonnberg" % "sbt-docker" % "1.4.1")
+
 
 // sbt-web
 addSbtPlugin("com.typesafe.sbt" % "sbt-jshint" % "1.0.3")

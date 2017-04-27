@@ -1,3 +1,5 @@
+
+
 // TODO Replace with your project's/module's name
 name := "todomvc-play-angular-require"
 
@@ -11,6 +13,9 @@ scalaVersion in ThisBuild := "2.11.8"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
+//  .enablePlugins(sbtdocker.DockerPlugin)
+
+
 
 // Dependencies
 libraryDependencies ++= Seq(
@@ -79,3 +84,14 @@ RjsKeys.paths += ("jsRoutes" -> ("/jsroutes" -> "empty:"))
 
 // All work and no play...
 emojiLogs
+
+/*
+dockerfile in docker := new Dockerfile {
+  from("openjdk:8u121-jre-alpine")
+  workDir("/srv")
+  cmdRaw("java -jar app.jar")
+}
+
+*/
+
+publishMavenStyle := true
